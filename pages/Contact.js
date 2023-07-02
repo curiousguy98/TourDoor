@@ -2,23 +2,6 @@ import React from 'react'
 import Head from 'next/head'
 import Navbar from "../components/Navbar"
 import Footer from "../components/footer"
-import {getImages} from '../util/database'
-
-export async function getStaticProps() {
-  const images = await getImages();
-
-  if (!images) {
-    return {
-      notFound: true
-    };
-  }
-
-  return { 
-    props: {
-      images: JSON.parse(JSON.stringify(images))
-    }
-  };
-}
 
 function ContactCard({ name, phone, address, email }) {
   return (
@@ -31,7 +14,7 @@ function ContactCard({ name, phone, address, email }) {
   );
 }
 
-const Contact = ({images}) => {
+const Contact = () => {
   return (
     <div>
       <Head>

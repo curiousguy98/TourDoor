@@ -1,23 +1,10 @@
-import { useTheme } from 'next-themes'
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Button} from '@fluentui/react-components';
 import {Guardian24Filled, Beach24Filled, Accessibility24Regular, Home24Regular, NotepadPerson24Regular } from '@fluentui/react-icons';
 
 
 export default function BigNav() {
-    const { theme, setTheme } = useTheme();
-    const [dark, darkTheme] = useState('show');
 
-    const [ light, lightTheme] = useState('hidden');
-  
-  function inverted() {
-    theme === 'light' ? darkTheme('show') : darkTheme('hidden')
-    theme === 'light' ? lightTheme('hidden') : lightTheme('show')
-    
-  }
-  useEffect(() => {
-    inverted()
-  });
     return(
      
    <div style={{textAlign: 'center'}} className="inline-block">

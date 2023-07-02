@@ -5,7 +5,6 @@ import ImgCard from '../components/ImgCard'
 import Footer from "../components/footer"
 import {getImages} from '../util/database'
 import styles from './index.module.css'
-import { FaTwitter, FaDiscord, FaFacebook } from 'react-icons/fa'
 
 export async function getStaticProps() {
   const images = await getImages();

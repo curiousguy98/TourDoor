@@ -1,17 +1,10 @@
 
 import React,{useState,useEffect} from "react";
 import BigNavbar from "./BigNav"
-import { Button, Menu, MenuList, MenuTrigger } from "@fluentui/react-components";
-import { ChevronDown28Filled} from '@fluentui/react-icons';
-
+import { Menu, MenuList } from "@fluentui/react-components";
 
 export default function Navbar() {
-    const [rotate, showRotate] = useState('rotate-0');
     const [open, setOpen] = useState(false);
-    function showBar() {
-      rotate == 'rotate-0' ? showRotate('rotate-180') : showRotate('rotate-0'); 
-      open == false ? setOpen(true) : setOpen(false)
-  } 
 
   useEffect(() => {
     setOpen(true)
